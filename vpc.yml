@@ -22,7 +22,8 @@ Resources:
       EnableDnsHostnames: true
       CidrBlock: !FindInMap ['SubnetConfig', 'VPC', 'CIDR']
       Tags:
-        - AWS-CFN-VPC
+      - Key: Name
+        Value:  !Join ['', [!Ref "AWS::StackName", "-VPC" ]]
 
   PublicSubnetOne:
     Type: AWS::EC2::Subnet
@@ -35,7 +36,8 @@ Resources:
       CidrBlock: !FindInMap ['SubnetConfig', 'PublicOne', 'CIDR']
       MapPublicIpOnLaunch: true
       Tags:
-        - AWS-CFN-PUBLIC-SUBNET-ONE
+      - Key: Name
+        Value: !Sub ${AWS::StackName}-Public-One
         
   PublicSubnetTwo:
     Type: AWS::EC2::Subnet
@@ -48,7 +50,8 @@ Resources:
       CidrBlock: !FindInMap ['SubnetConfig', 'PublicTwo', 'CIDR']
       MapPublicIpOnLaunch: true
       Tags:
-        - AWS-CFN-PUBLIC-SUBNET-TWO
+      - Key: Name
+        Value: !Sub ${AWS::StackName}-Public-Two
 
   InternetGateway:
     Type: AWS::EC2::InternetGateway
