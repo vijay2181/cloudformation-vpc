@@ -8,5 +8,9 @@
 Command:  
 
 ```bash
+aws configure
+```
+
+```bash
 aws cloudformation create-stack --capabilities CAPABILITY_IAM --stack-name aws-vpc --template-body file://./vpc.yml
 ```
