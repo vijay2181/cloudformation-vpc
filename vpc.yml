@@ -3,7 +3,7 @@ Description: VPC and subnets
 Parameters:
   EnvironmentName:
     Type: String
-    Default: aws-cfn-vpc
+    Default: aws-cfn
 
 Mappings:
   SubnetConfig:
@@ -23,7 +23,7 @@ Resources:
       CidrBlock: !FindInMap ['SubnetConfig', 'VPC', 'CIDR']
       Tags:
       - Key: Name
-        Value:  !Join ['', [!Ref "AWS::StackName", "-VPC" ]]
+        Value:  !Join ['', [!Ref "AWS::StackName", "-VPC2" ]]
 
   PublicSubnetOne:
     Type: AWS::EC2::Subnet
