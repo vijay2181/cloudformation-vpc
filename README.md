@@ -5,10 +5,18 @@
 * Internet Gateway
 * routing tables
 
-Command:  
+Commands:  
+
+```bash
+pip3 install cfn-lint
+```
 
 ```bash
 aws configure
+```
+
+```bash
+cfn-lint vpc.yml
 ```
 
 ```bash
