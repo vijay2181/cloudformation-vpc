@@ -23,7 +23,7 @@ Resources:
       CidrBlock: !FindInMap ['SubnetConfig', 'VPC', 'CIDR']
       Tags:
       - Key: Name
-        Value:  !Join ['', [!Ref "AWS::StackName", "-VPC2" ]]
+        Value:  !Join ['', [!Ref "AWS::StackName", "-VPC" ]]
 
   PublicSubnetOne:
     Type: AWS::EC2::Subnet
@@ -38,7 +38,7 @@ Resources:
       Tags:
       - Key: Name
         Value: !Sub ${AWS::StackName}-Public-One
-        
+
   PublicSubnetTwo:
     Type: AWS::EC2::Subnet
     Properties:
@@ -55,9 +55,10 @@ Resources:
 
   InternetGateway:
     Type: AWS::EC2::InternetGateway
-    Tags:
-      - Key: Name
-        Value: !Sub ${AWS::StackName}-Public-IGW
+    Properties:
+       Tags:
+         - Key: Name
+           Value: !Sub ${AWS::StackName}-Public-IGW
   GatewayAttachement:
     Type: AWS::EC2::VPCGatewayAttachment
     Properties:
@@ -67,9 +68,9 @@ Resources:
     Type: AWS::EC2::RouteTable
     Properties:
       VpcId: !Ref 'VPC'
-    Tags:
-      - Key: Name
-        Value: !Sub ${AWS::StackName}-Public-RT
+      Tags:
+        - Key: Name
+          Value: !Sub ${AWS::StackName}-Public-RT
   PublicRoute:
     Type: AWS::EC2::Route
     DependsOn: GatewayAttachement
@@ -87,7 +88,7 @@ Resources:
     Properties:
       SubnetId: !Ref PublicSubnetTwo
       RouteTableId: !Ref PublicRouteTable
-
+                                                                                                                             59,12         75%
 Outputs:
   VpcId:
     Description: The ID of the VPC that this stack is deployed in
@@ -104,3 +105,4 @@ Outputs:
     Value: !Ref 'PublicSubnetTwo'
     Export:
       Name: !Sub ${EnvironmentName}:PublicSubnetTwo
+                                                                                                                             107,51        Bot
