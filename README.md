@@ -1,7 +1,7 @@
 # Create AWS infrastructure
 
 * VPC
-* 2 subnets in 2 different AZs
+* 2 Public subnets in 2 different AZs
 * Internet Gateway
 * routing tables
 
