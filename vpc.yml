@@ -55,6 +55,9 @@ Resources:
 
   InternetGateway:
     Type: AWS::EC2::InternetGateway
+    Tags:
+      - Key: Name
+        Value: !Sub ${AWS::StackName}-Public-IGW
   GatewayAttachement:
     Type: AWS::EC2::VPCGatewayAttachment
     Properties:
@@ -64,6 +67,9 @@ Resources:
     Type: AWS::EC2::RouteTable
     Properties:
       VpcId: !Ref 'VPC'
+    Tags:
+      - Key: Name
+        Value: !Sub ${AWS::StackName}-Public-RT
   PublicRoute:
     Type: AWS::EC2::Route
     DependsOn: GatewayAttachement
