@@ -64,6 +64,7 @@ Resources:
     Properties:
       VpcId: !Ref 'VPC'
       InternetGatewayId: !Ref 'InternetGateway'
+      
   PublicRouteTable:
     Type: AWS::EC2::RouteTable
     Properties:
@@ -105,4 +106,4 @@ Outputs:
     Value: !Ref 'PublicSubnetTwo'
     Export:
       Name: !Sub ${EnvironmentName}:PublicSubnetTwo
-                                                                                                                             107,51        Bot
+      
