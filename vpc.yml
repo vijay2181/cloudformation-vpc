@@ -3,7 +3,7 @@ Description: VPC and subnets
 Parameters:
   EnvironmentName:
     Type: String
-    Default: aws-vpc
+    Default: aws-cfn-vpc
 
 Mappings:
   SubnetConfig:
