@@ -3,7 +3,7 @@
 * VPC
 * 2 Public subnets in 2 different AZs
 * Internet Gateway
-* routing tables
+* Routing tables
 
 Commands:  
 
