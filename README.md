@@ -8,5 +8,5 @@
 Command:  
 
 ```bash
-aws cloudformation create-stack --capabilities CAPABILITY_IAM --stack-name ecs-core-infrastructure --template-body file://./vpc.yml
+aws cloudformation create-stack --capabilities CAPABILITY_IAM --stack-name aws-vpc --template-body file://./vpc.yml
 ```
