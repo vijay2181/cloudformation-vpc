@@ -31,6 +31,7 @@ aws cloudformation update-stack --stack-name aws-cfn --template-body file://./vp
 aws cloudformation delete-stack --stack-name aws-cfn
 ```
 
+
 ## Image
 
 ![image](https://user-images.githubusercontent.com/66196388/183374536-9d1c61f2-f9ea-43f0-9304-00570cb4a144.png)
