@@ -12,11 +12,11 @@ pip3 install cfn-lint
 ```
 
 ```bash
-aws configure
+cfn-lint vpc.yml
 ```
 
 ```bash
-cfn-lint vpc.yml
+aws configure
 ```
 
 ```bash
