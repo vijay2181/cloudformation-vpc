@@ -1,9 +1,9 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: VPC and subnets as base for an ECS cluster
+Description: VPC and subnets
 Parameters:
   EnvironmentName:
     Type: String
-    Default: ecs-course
+    Default: aws-vpc
 
 Mappings:
   SubnetConfig:
