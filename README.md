@@ -22,3 +22,11 @@ aws configure
 ```bash
 aws cloudformation create-stack --capabilities CAPABILITY_IAM --stack-name aws-cfn --template-body file://./vpc.yml
 ```
+
+```bash
+aws cloudformation update-stack --stack-name aws-cfn --template-body file://./vpc.yml
+```
+
+```bash
+aws cloudformation delete-stack --stack-name aws-cfn
+```
