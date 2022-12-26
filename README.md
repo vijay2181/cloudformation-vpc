@@ -20,15 +20,15 @@ aws configure
 ```
 
 ```bash
-aws cloudformation create-stack --capabilities CAPABILITY_IAM --stack-name aws-cfn --template-body file://./vpc.yml
+aws cloudformation create-stack --capabilities CAPABILITY_IAM --stack-name aws-cfn --template-body file://./vpc.yml --profile <profile_name>
 ```
 
 ```bash
-aws cloudformation update-stack --stack-name aws-cfn --template-body file://./vpc.yml
+aws cloudformation update-stack --stack-name aws-cfn --template-body file://./vpc.yml --profile <profile_name>
 ```
 
 ```bash
-aws cloudformation delete-stack --stack-name aws-cfn
+aws cloudformation delete-stack --stack-name aws-cfn --profile <profile_name>
 ```
 
 
