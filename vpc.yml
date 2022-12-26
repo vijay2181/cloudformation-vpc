@@ -89,7 +89,7 @@ Resources:
     Properties:
       SubnetId: !Ref PublicSubnetTwo
       RouteTableId: !Ref PublicRouteTable
-                                                                                                                             59,12         75%
+                                                                                                                            
 Outputs:
   VpcId:
     Description: The ID of the VPC that this stack is deployed in
